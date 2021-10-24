@@ -15,9 +15,11 @@
 
 (Terminalで実行してください / 最初の `$` はプロンプトを意味します、 `$` のコピペは不要です)
 
-1. $ `docker-compose up -d`
-2. $ `docker-compose exec php bash`
-3. $ `laravel new public`
+1. `.env.default` から `.env` をコピーして作成
+2. `.env` 内で定義されている `COMPOSE_PROJECT_NAME=DEFAULT` の `DEFAULT` を任意の名前に変更
+3. $ `docker-compose -p <.envで定義したCOMPOSE_PROJECT_NAME=DEFAULTの値> up -d`
+4. $ `docker-compose exec php bash`
+5. $ `laravel new public`
 
 ## 参考
 
