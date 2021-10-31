@@ -18,7 +18,7 @@
 1. `.env.default` から `.env` をコピーして作成
 2. `.env` 内で定義されている `COMPOSE_PROJECT_NAME=DEFAULT` の `DEFAULT` を任意の名前に変更
 3. $ `docker-compose -p <.envで定義したCOMPOSE_PROJECT_NAME=DEFAULTの値> up -d`
-4. $ `docker-compose exec php bash`
+4. $ `docker exec laravel bash`
 5. $ `laravel new public`
 
 ## 参考
