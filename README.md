@@ -20,7 +20,7 @@
 3. $ `docker-compose -p <.envで定義したCOMPOSE_PROJECT_NAME=DEFAULTの値> up -d`
 4. $ `docker exec -it <laravelのコンテナのname> bash`
 5. $ `laravel new public`
-6. $ `chmod 777 ./public/storage/ -R
+6. $ `chmod 777 ./public/storage/ -R`
 
 ## 参考
 
