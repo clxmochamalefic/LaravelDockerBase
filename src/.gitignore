@@ -1,0 +1,6 @@
+/backend/*
+/frontend/*
+/db/*
+!/backend/.gitkeep
+!/frontend/.gitkeep
+!/db/.gitkeep
