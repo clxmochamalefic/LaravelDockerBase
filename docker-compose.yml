@@ -17,16 +17,16 @@ services:
     - laravel
 
   db:
-    image: mysql:5.7
+    image: mariadb:10.11
     environment:
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: P@ssw0rd
       MYSQL_DATABASE: database
       MYSQL_USER: docker
       MYSQL_PASSWORD: docker
       TZ: 'Asia/Tokyo'
     command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     volumes:
-    - ./docker/db/data:/var/lib/mysql
+    - ./db/data:/var/lib/mysql
     - ./docker/db/my.cnf:/etc/mysql/conf.d/my.cnf
     - ./docker/db/sql:/docker-entrypoint-initdb.d
     ports:
@@ -40,7 +40,8 @@ services:
       - "8088:80"
     environment:
       MYSQL_USERNAME: docker
-      MYSQL_ROOT_PASSWORD: docker
+      MYSQL_PASSWORD: docker
+      MYSQL_ROOT_PASSWORD: P@ssw0rd
       PMA_HOST: db
       PMA_PORT: 3306
     restart: always

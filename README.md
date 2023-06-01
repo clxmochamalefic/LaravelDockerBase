@@ -3,17 +3,19 @@
 ## 構成
 
 - php
-    - PHP8.0
+  - PHP8.0
 - nginx
-    - stable
+  - stable
 - db
-    - mysql:5.7
+  - mariadb:10.11
 - php-my-admin
-    - stable
+  - stable
 
 ## `git clone` した後にやること
 
 (Terminalで実行してください / 最初の `$` はプロンプトを意味します、 `$` のコピペは不要です)
+
+### `docker` / `docker-desktop`
 
 1. `.env.default` から `.env` をコピーして作成
 2. `.env` 内で定義されている `COMPOSE_PROJECT_NAME=DEFAULT` の `DEFAULT` を任意の名前に変更
@@ -22,6 +24,16 @@
 5. $ `laravel new public`
 6. $ `chmod 777 ./public/storage/ -R`
 
+### `nerdctl`
+
+#### `docker-compose` コマンド部分
+
+以下のコマンドに変更する
+
+```sh
+nerdctl compose -p <.envで定義したCOMPOSE_PROJECT_NAMEの値> -f <docker-compose.ymlのpath> up
+```
+
 ## 参考
 
-https://qiita.com/A-Kira/items/1c55ef689c0f91420e81
+<https://qiita.com/A-Kira/items/1c55ef689c0f91420e81>
