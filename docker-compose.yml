@@ -40,7 +40,8 @@ services:
       - "8088:80"
     environment:
       MYSQL_USERNAME: docker
-      MYSQL_ROOT_PASSWORD: docker
+      MYSQL_PASSWORD: docker
+      MYSQL_ROOT_PASSWORD: P@ssw0rd
       PMA_HOST: db
       PMA_PORT: 3306
     restart: always
