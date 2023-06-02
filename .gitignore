@@ -23,3 +23,10 @@ Homestead.json
 .phpunit.result.cache
 
 /docker/db/data/
+/db/data/
+
+/server/
+
+
+# .gitkeep
+!.gitkeep
