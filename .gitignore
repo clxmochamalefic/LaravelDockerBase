@@ -22,10 +22,9 @@ Homestead.json
 /.vagrant
 .phpunit.result.cache
 
-/docker/db/data/
-/db/mysql/data/
-/db/redis/data/
-
+# tempolary data dir
+/data/
+# project dir
 /server/
 
 

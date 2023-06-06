@@ -6,7 +6,7 @@ RUN apt-get update \
   && docker-php-ext-configure zip \
   && docker-php-ext-install zip pdo_mysql
 
-#Composer install
+#composer install
 COPY --from=composer /usr/bin/composer /usr/bin/composer
 
 ENV COMPOSER_ALLOW_SUPERUSER 1
@@ -18,4 +18,5 @@ ENV PATH $PATH:/composer/vendor/bin
 
 WORKDIR /var/www
 
+#laravel install
 RUN composer global require "laravel/installer"
