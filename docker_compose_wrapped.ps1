@@ -5,8 +5,8 @@ Param(
   [switch]$n
 )
 
-$nginx_default_conf = "docker\nginx\.default.conf"
-$nginx_conf = "docker\nginx\default.conf"
+$nginx_default_conf = "docker\nginx\default.conf"
+$nginx_conf = "data\nginx\config\default.conf"
 
 # 設定読み込み
 $ini_path = @(Split-Path $script:myInvocation.MyCommand.Path -Parent).Trim()

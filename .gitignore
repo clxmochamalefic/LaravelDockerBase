@@ -24,9 +24,9 @@ Homestead.json
 
 # tempolary data dir
 /data/
+
 # project dir
 /server/
-
 
 # .gitkeep
 !.gitkeep
