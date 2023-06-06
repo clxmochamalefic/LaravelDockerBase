@@ -23,7 +23,8 @@ Homestead.json
 .phpunit.result.cache
 
 /docker/db/data/
-/db/data/
+/db/mysql/data/
+/db/redis/data/
 
 /server/
 
